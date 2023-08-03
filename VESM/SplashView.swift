@@ -13,6 +13,7 @@ struct SplashView: View {
     
 //    @State private var nextButtonTapped = false
 //        @StateObject private var preferencesManager = PreferencesManager()
+    //mm
     
     var body: some View {
 //        NavigationStack {
