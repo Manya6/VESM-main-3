@@ -26,7 +26,7 @@ struct SplashView: View {
                     Rectangle()
                         .fill(Color(red: 0.97, green:0.72, blue:0.81))
                         .ignoresSafeArea()
-                    Image("logo ")
+                    Image("logo")
                         .resizable(resizingMode: .stretch)
                         .aspectRatio(contentMode: .fit)
                     
