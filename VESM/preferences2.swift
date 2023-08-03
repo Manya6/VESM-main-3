@@ -10,6 +10,9 @@ import SwiftUI
 struct preferences2: View {
     
     @State private var genreIcon = ""
+    @State private var movies = false
+    @State private var books = false
+    @State private var tvseries = false
     
     var body: some View {
         ZStack {
@@ -31,16 +34,28 @@ struct preferences2: View {
 //                HStack {
 //                    Spacer()
                     Button("Movies") {
+                        movies.toggle()
                         genreIcon = "🎬"
                     }
+                    .buttonStyle(.borderedProminent)
+                    .foregroundColor(.black)
+                    .tint(movies == true ? Color(red: 230/255, green: 48/255, blue: 138/255) : Color(red: 248/255, green: 184/255, blue: 208/255))
                     .padding(.bottom, 50.0)
                     Button("Books") {
+                        books.toggle()
                         genreIcon = "📚"
                     }
+                    .buttonStyle(.borderedProminent)
+                    .foregroundColor(.black)
+                    .tint(books == true ? Color(red: 230/255, green: 48/255, blue: 138/255) : Color(red: 248/255, green: 184/255, blue: 208/255))
                     .padding(.bottom, 50.0)
                     Button("TV Series") {
+                        tvseries.toggle()
                         genreIcon = "📺"
                     }
+                    .buttonStyle(.borderedProminent)
+                    .foregroundColor(.black)
+                    .tint(tvseries == true ? Color(red: 230/255, green: 48/255, blue: 138/255) : Color(red: 248/255, green: 184/255, blue: 208/255))
                     Spacer()
                     
 //                }
@@ -52,7 +67,7 @@ struct preferences2: View {
                     NavigationLink(destination: preferences3()) {
                         Text("⇥")
                             .font(.largeTitle)
-                            .fontWeight(.bold)
+                            
                     }
                 }
                 Spacer()

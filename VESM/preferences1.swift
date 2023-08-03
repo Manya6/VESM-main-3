@@ -10,6 +10,7 @@ import SwiftUI
 struct preferences1: View {
     
     @State private var genreIcon = ""
+    @State private var genreIcon2 = ""
     
     @State private var ChangeBgColor1 = false
     @State private var ChangeBgColor2 = false
@@ -28,7 +29,7 @@ struct preferences1: View {
                 Color(red:179/255,green:199/255,blue:247/255)
                     .ignoresSafeArea()
                 VStack {
-                    Text(genreIcon)
+                    Text("\(genreIcon) \(genreIcon2)")
                         .font(.system(size: 100))
                         .padding(.top, 30.0)
                         .padding(.bottom,-30.0)
@@ -62,54 +63,91 @@ struct preferences1: View {
                     HStack{
                         Spacer()
                         Button("Action"){
-                            genreIcon = "🥊"
-                        
+                            ChangeBgColor1.toggle()
+                            updateGenreIcons()
                         }
-//                        Toggle("Action", isOn: $ChangeBgColor7).toggleStyle(.button)
-//                            .foregroundColor(.black)
-//                            .tint(ChangeBgColor7 ? Color(red: 0.9, green: 0.7, blue: 0.4) : .black)
+                        .buttonStyle(.borderedProminent)
+                                                .foregroundColor(.black)
+                                                .tint(ChangeBgColor1 == true ? Color(red: 230/255, green: 48/255, blue: 138/255) : Color(red: 248/255, green: 184/255, blue: 208/255))
+
+
                         
                         Spacer()
                         Button("Comedy"){
-                            genreIcon = "🤣"
+                            ChangeBgColor2.toggle()
+                            updateGenreIcons()
                         }
+                        .buttonStyle(.borderedProminent)
+                                                .foregroundColor(.black)
+                .tint(ChangeBgColor2 == true ? Color(red: 230/255, green: 48/255, blue: 138/255) : Color(red: 248/255, green: 184/255, blue: 208/255))
                         Spacer()
                         Button("Drama"){
-                            genreIcon = "🎭"
+                            ChangeBgColor3.toggle()
+                            updateGenreIcons()
                         }
+                        .buttonStyle(.borderedProminent)
+                        .foregroundColor(.black)
+                        .tint(ChangeBgColor3 == true ? Color(red: 230/255, green: 48/255, blue: 138/255) : Color(red: 248/255, green: 184/255, blue: 208/255))
                         Spacer()
                     }
+            
+  
+                    
                     .padding(.bottom, 20.0)
                     .padding(.top, 40.0)
                     HStack{
                         Spacer()
                         Button("Fantasy"){
-                            genreIcon = "🧚🏼‍♀️"
+                            ChangeBgColor4.toggle()
+                            updateGenreIcons()
                         }
+                        .buttonStyle(.borderedProminent)
+                                                .foregroundColor(.black)
+                                                .tint(ChangeBgColor4 == true ? Color(red: 230/255, green: 48/255, blue: 138/255) : Color(red: 248/255, green: 184/255, blue: 208/255))
                         Spacer()
                         Button("Horror"){
-                            genreIcon = "👻"
+                            ChangeBgColor5.toggle()
+                            updateGenreIcons()
                         }
+                        .buttonStyle(.borderedProminent)
+                                                .foregroundColor(.black)
+                                                .tint(ChangeBgColor5 == true ? Color(red: 230/255, green: 48/255, blue: 138/255) : Color(red: 248/255, green: 184/255, blue: 208/255))
                         Spacer()
                         Button("Romance"){
-                            genreIcon = "❤️‍🔥"
+                            ChangeBgColor6.toggle()
+                            updateGenreIcons()
                         }
+                        .buttonStyle(.borderedProminent)
+                                                .foregroundColor(.black)
+                                                .tint(ChangeBgColor6 == true ? Color(red: 230/255, green: 48/255, blue: 138/255) : Color(red: 248/255, green: 184/255, blue: 208/255))
                         Spacer()
                     }
                     .padding(.bottom, 20.0)
                     HStack{
                         Spacer()
                         Button("Sci-Fi"){
-                            genreIcon = "🔭"
+                            ChangeBgColor7.toggle()
+                            updateGenreIcons()
                         }
+                        .buttonStyle(.borderedProminent)
+                                                .foregroundColor(.black)
+                                                .tint(ChangeBgColor7 == true ? Color(red: 230/255, green: 48/255, blue: 138/255) : Color(red: 248/255, green: 184/255, blue: 208/255))
                         Spacer()
                         Button("Thriller"){
-                            genreIcon = "🎢"
+                            ChangeBgColor8.toggle()
+                            updateGenreIcons()
                         }
+                        .buttonStyle(.borderedProminent)
+                                                .foregroundColor(.black)
+                                                .tint(ChangeBgColor8 == true ? Color(red: 230/255, green: 48/255, blue: 138/255) : Color(red: 248/255, green: 184/255, blue: 208/255))
                         Spacer()
                         Button("Mystery"){
-                            genreIcon = "😶‍🌫️"
+                            ChangeBgColor9.toggle()
+                            updateGenreIcons()
                         }
+                        .buttonStyle(.borderedProminent)
+                                                .foregroundColor(.black)
+                                                .tint(ChangeBgColor9 == true ? Color(red: 230/255, green: 48/255, blue: 138/255) : Color(red: 248/255, green: 184/255, blue: 208/255))
                         Spacer()
                     }
                     
@@ -120,21 +158,53 @@ struct preferences1: View {
                             .padding(.top)/*@END_MENU_TOKEN@*/
                     }
                     .padding(50.0)
-//                    HStack {
-//                        Spacer()
-//                        Text(genreIcon)
-//                            .font(.largeTitle)
-//                        Spacer()
-//                        Text(genreIcon)
-//                            .font(.largeTitle)
-//                            .multilineTextAlignment(.leading)
-//                        Spacer()
-//                    }
+
                     Spacer()
                 }
             }
             }
         }
+    private func updateGenreIcons() {
+        var selectedGenres: [String] = []
+        if ChangeBgColor1 {
+            selectedGenres.append("🥊")
+        }
+        if ChangeBgColor2 {
+            selectedGenres.append("🤣")
+        }
+        if ChangeBgColor3 {
+            selectedGenres.append("🎭")
+        }
+        if ChangeBgColor4 {
+            selectedGenres.append("🧚🏼‍♀️")
+        }
+        if ChangeBgColor5 {
+            selectedGenres.append("👻")
+        }
+        if ChangeBgColor6 {
+            selectedGenres.append("❤️‍🔥")
+        }
+        if ChangeBgColor7 {
+            selectedGenres.append("🔭")
+        }
+        if ChangeBgColor8 {
+            selectedGenres.append("🎢")
+        }
+        if ChangeBgColor9 {
+            selectedGenres.append("😶‍🌫️")
+        }
+        
+        if selectedGenres.count >= 2 {
+            genreIcon = selectedGenres[0]
+            genreIcon2 = selectedGenres[1]
+        } else if selectedGenres.count == 1 {
+            genreIcon = selectedGenres[0]
+            genreIcon2 = ""
+        } else {
+            genreIcon = ""
+            genreIcon2 = ""
+        }
+    }
     }
 
 struct preferences1_Previews: PreviewProvider {

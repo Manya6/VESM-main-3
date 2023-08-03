@@ -8,97 +8,144 @@
 import SwiftUI
 
 struct preferences3: View {
-    @State private var ChangeBgColor1 = false
-    @State private var ChangeBgColor2 = false
-    @State private var ChangeBgColor3 = false
-    @State private var ChangeBgColor4 = false
-    @State private var ChangeBgColor5 = false
+    @State private var genreIcon = ""
+    @State private var genreIcon2 = ""
+    
+    @State private var Change1 = false
+    @State private var Change2 = false
+    @State private var Change3 = false
+    @State private var Change4 = false
+    @State private var Change5 = false
+    @State private var Change6 = false
     
     var body: some View {
         NavigationStack {
             ZStack {
                 Color(red:179/255,green:199/255,blue:247/255)
                     .ignoresSafeArea()
-
+                
                 VStack() {
-                    
+                    Text("\(genreIcon) \(genreIcon2)")
+                        .font(.system(size: 100))
+                        .padding(.top, -50.0)
+                        .padding(.bottom, 100.0)
                     Text("What's your age?")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.center)
+                        .padding(.top, -50.0)
                     //                    .padding(.top, -150.0)
                     
                     
-                    HStack {
-                        
+                    
+                    HStack{
                         Spacer()
                         Button("Toddler"){
-                            ChangeBgColor1.toggle()
-                            
+                            Change1.toggle()
+                            updateGenreIcons()
                         }
-                        
                         .buttonStyle(.borderedProminent)
-                        .tint(ChangeBgColor1 == true ? .yellow: .pink)
+                        .foregroundColor(.black)
+                        .tint(Change1 == true ? .yellow : .pink)
+                        
+                        
                         
                         Spacer()
                         Button("Child"){
-                            ChangeBgColor2.toggle()
+                            Change2.toggle()
+                            updateGenreIcons()
+                            
                         }
-                        //                    .font(.headline)
-                        //                    .tint(Color(red:255 / 255, green : 156 / 255 , blue : 190/255))
                         .buttonStyle(.borderedProminent)
-                        .tint(ChangeBgColor2 == true ? .yellow: .pink)
-                        
+                        .foregroundColor(.black)
+                        .tint(Change2 == true ? .yellow : .pink)
                         Spacer()
                         Button("Teen"){
-                            ChangeBgColor3.toggle()
+                            Change3.toggle()
+                            updateGenreIcons()
                         }
                         .buttonStyle(.borderedProminent)
-                        .tint(ChangeBgColor3 == true ? .yellow: .pink)
+                        .foregroundColor(.black)
+                        .tint(Change3 == true ? .yellow : .pink)
                         Spacer()
-                        
-                        
                     }
                     //                .padding(.bottom,20.0)
-                    .frame(maxHeight: .infinity, alignment: .centerFirstTextBaseline)
-                    
                     .padding(20.0)
                     
-                    HStack() {
+                    HStack{
                         Spacer()
                         Button("Young Adult"){
-                            ChangeBgColor4.toggle()
+                            Change4.toggle()
+                            updateGenreIcons()
                         }
-                        
                         .buttonStyle(.borderedProminent)
-                        .tint(ChangeBgColor4 == true ? .yellow: .pink)
+                        .foregroundColor(.black)
+                        .tint(Change4 == true ? .yellow : .pink)
+                        
+                        
                         
                         Spacer()
                         Button("Adult"){
-                            ChangeBgColor5.toggle()
+                            Change5.toggle()
+                            updateGenreIcons()
                         }
                         .buttonStyle(.borderedProminent)
-                        .tint(ChangeBgColor5 == true ? .yellow: .pink)
-                        
+                        .foregroundColor(.black)
+                        .tint(Change5 == true ? .yellow : .pink)
                         Spacer()
+//                        Button("Drama"){
+//                            Change6.toggle()
+//                            genreIcon = "🎭"
+//                            genreIcon2 = "🎭"
+//                        }
+//                        .buttonStyle(.borderedProminent)
+//                        .foregroundColor(.black)
+//                        .tint(Change6 == true ? .yellow : .pink)
+//                        Spacer()
                     }
-                    .padding(30)
-                }
-                VStack(alignment: .leading) {
                     
                     NavigationLink(destination: preferences4()) {
                         Text("Next Question")
                         
                     }
+                    .padding(.top, 30.0)
                     
-                    //.frame(maxHeight: .infinity ,alignment: .bottom)
+                    
                     
                     
                 }
-                .frame(maxHeight: .infinity  ,alignment: .bottom)
                 
                 
             }
+        }
+    }
+    private func updateGenreIcons() {
+        var selectedGenres: [String] = []
+        if Change1 {
+            selectedGenres.append("👶")
+        }
+        if Change2 {
+            selectedGenres.append("🧒")
+        }
+        if Change3 {
+            selectedGenres.append("🧑")
+        }
+        if Change4 {
+            selectedGenres.append("🧑‍🦱")
+        }
+        if Change5 {
+            selectedGenres.append("👨‍🦱")
+        }
+        
+        if selectedGenres.count >= 2 {
+            genreIcon = selectedGenres[0]
+            genreIcon2 = selectedGenres[1]
+        } else if selectedGenres.count == 1 {
+            genreIcon = selectedGenres[0]
+            genreIcon2 = ""
+        } else {
+            genreIcon = ""
+            genreIcon2 = ""
         }
     }
 }
