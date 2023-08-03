@@ -105,7 +105,7 @@ struct preferences3: View {
 
 struct preferences3_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SplashView()
     }
 }
 

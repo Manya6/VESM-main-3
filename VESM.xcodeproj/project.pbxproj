@@ -10,7 +10,7 @@
 		BD6AE4AE2A7919320004DD37 /* preferences1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AE4AD2A7919320004DD37 /* preferences1.swift */; };
 		BD6AE4B02A791F1E0004DD37 /* preferences2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AE4AF2A791F1E0004DD37 /* preferences2.swift */; };
 		BDB705E12A78FB600077C5D9 /* VESMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB705E02A78FB600077C5D9 /* VESMApp.swift */; };
-		BDB705E32A78FB600077C5D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB705E22A78FB600077C5D9 /* ContentView.swift */; };
+		BDB705E32A78FB600077C5D9 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB705E22A78FB600077C5D9 /* SplashView.swift */; };
 		BDB705E52A78FB620077C5D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB705E42A78FB620077C5D9 /* Assets.xcassets */; };
 		BDB705E82A78FB620077C5D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB705E72A78FB620077C5D9 /* Preview Assets.xcassets */; };
 		BDB711E42A794A9B0038DA58 /* preferences3.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB711E32A794A9B0038DA58 /* preferences3.swift */; };
@@ -23,7 +23,7 @@
 		BD6AE4AF2A791F1E0004DD37 /* preferences2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = preferences2.swift; sourceTree = "<group>"; };
 		BDB705DD2A78FB600077C5D9 /* VESM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VESM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB705E02A78FB600077C5D9 /* VESMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VESMApp.swift; sourceTree = "<group>"; };
-		BDB705E22A78FB600077C5D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BDB705E22A78FB600077C5D9 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		BDB705E42A78FB620077C5D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDB705E72A78FB620077C5D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BDB711E32A794A9B0038DA58 /* preferences3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = preferences3.swift; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				BDB705E02A78FB600077C5D9 /* VESMApp.swift */,
-				BDB705E22A78FB600077C5D9 /* ContentView.swift */,
+				BDB705E22A78FB600077C5D9 /* SplashView.swift */,
 				BD6AE4AD2A7919320004DD37 /* preferences1.swift */,
 				BD6AE4AF2A791F1E0004DD37 /* preferences2.swift */,
 				BDB711E32A794A9B0038DA58 /* preferences3.swift */,
@@ -152,7 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDB705E32A78FB600077C5D9 /* ContentView.swift in Sources */,
+				BDB705E32A78FB600077C5D9 /* SplashView.swift in Sources */,
 				BDC8B37A2A7A4F3E00CCF618 /* preferences4.swift in Sources */,
 				BD6AE4B02A791F1E0004DD37 /* preferences2.swift in Sources */,
 				BDC8B37E2A7A54EC00CCF618 /* recommendations.swift in Sources */,
