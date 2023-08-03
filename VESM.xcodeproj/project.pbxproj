@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		BD122DEC2A7BBA23002572E5 /* profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD122DEB2A7BBA23002572E5 /* profile.swift */; };
-		BD122DEE2A7BBCDD002572E5 /* todolist.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD122DED2A7BBCDD002572E5 /* todolist.swift */; };
 		BD122DF02A7BE688002572E5 /* aboutus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD122DEF2A7BE688002572E5 /* aboutus.swift */; };
+		BD26D45B2A7BEE9900147760 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD26D45A2A7BEE9900147760 /* ContentView.swift */; };
+		BD26D45D2A7BEEF800147760 /* newToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD26D45C2A7BEEF800147760 /* newToDo.swift */; };
+		BD26D45F2A7BEF1E00147760 /* toDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD26D45E2A7BEF1E00147760 /* toDoItem.swift */; };
 		BD6AE4AE2A7919320004DD37 /* preferences1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AE4AD2A7919320004DD37 /* preferences1.swift */; };
 		BD6AE4B02A791F1E0004DD37 /* preferences2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AE4AF2A791F1E0004DD37 /* preferences2.swift */; };
 		BDB705E12A78FB600077C5D9 /* VESMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB705E02A78FB600077C5D9 /* VESMApp.swift */; };
@@ -23,8 +25,10 @@
 
 /* Begin PBXFileReference section */
 		BD122DEB2A7BBA23002572E5 /* profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profile.swift; sourceTree = "<group>"; };
-		BD122DED2A7BBCDD002572E5 /* todolist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todolist.swift; sourceTree = "<group>"; };
 		BD122DEF2A7BE688002572E5 /* aboutus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutus.swift; sourceTree = "<group>"; };
+		BD26D45A2A7BEE9900147760 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BD26D45C2A7BEEF800147760 /* newToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newToDo.swift; sourceTree = "<group>"; };
+		BD26D45E2A7BEF1E00147760 /* toDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDoItem.swift; sourceTree = "<group>"; };
 		BD6AE4AD2A7919320004DD37 /* preferences1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = preferences1.swift; sourceTree = "<group>"; };
 		BD6AE4AF2A791F1E0004DD37 /* preferences2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = preferences2.swift; sourceTree = "<group>"; };
 		BDB705DD2A78FB600077C5D9 /* VESM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VESM.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,8 +79,10 @@
 				BDC8B3792A7A4F3E00CCF618 /* preferences4.swift */,
 				BDC8B37D2A7A54EC00CCF618 /* recommendations.swift */,
 				BD122DEF2A7BE688002572E5 /* aboutus.swift */,
-				BD122DED2A7BBCDD002572E5 /* todolist.swift */,
 				BD122DEB2A7BBA23002572E5 /* profile.swift */,
+				BD26D45A2A7BEE9900147760 /* ContentView.swift */,
+				BD26D45C2A7BEEF800147760 /* newToDo.swift */,
+				BD26D45E2A7BEF1E00147760 /* toDoItem.swift */,
 				BDB705E42A78FB620077C5D9 /* Assets.xcassets */,
 				BDB705E62A78FB620077C5D9 /* Preview Content */,
 			);
@@ -162,13 +168,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD122DEC2A7BBA23002572E5 /* profile.swift in Sources */,
-				BD122DEE2A7BBCDD002572E5 /* todolist.swift in Sources */,
+				BD26D45B2A7BEE9900147760 /* ContentView.swift in Sources */,
 				BDB705E32A78FB600077C5D9 /* SplashView.swift in Sources */,
+				BD26D45D2A7BEEF800147760 /* newToDo.swift in Sources */,
 				BDC8B37A2A7A4F3E00CCF618 /* preferences4.swift in Sources */,
 				BD6AE4B02A791F1E0004DD37 /* preferences2.swift in Sources */,
 				BDC8B37E2A7A54EC00CCF618 /* recommendations.swift in Sources */,
 				BD6AE4AE2A7919320004DD37 /* preferences1.swift in Sources */,
 				BD122DF02A7BE688002572E5 /* aboutus.swift in Sources */,
+				BD26D45F2A7BEF1E00147760 /* toDoItem.swift in Sources */,
 				BDB711E42A794A9B0038DA58 /* preferences3.swift in Sources */,
 				BDB705E12A78FB600077C5D9 /* VESMApp.swift in Sources */,
 			);

@@ -34,7 +34,7 @@ struct recommendations: View {
                             }
                             .padding(.horizontal, 75.0)
                            
-                            NavigationLink(destination: todolist()) {
+                            NavigationLink(destination: ContentView()) {
                                 Image(systemName: "note.text.badge.plus")
                                     .tint(Color(red:252/255, green: 201/255, blue: 181/255))
 
